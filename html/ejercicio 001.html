@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../functions.js"></script>
     <title>Ejercicio 1</title>
+    <script src="../functions.js"></script>
 </head>
 <body>
     <h1>Ejercicio 1</h1>
     <hr>
-    <p>Mostrar datos en la consola con 'console.log'</p>
-    <script lang="JavaScript">
+    <h4>Mostrar datos en la consola con 'console.log'</h4>
+    <script>
         if (pet == true) {
             console.log("Mi nombre es " + name + " " + surname + ", tengo " + age + " años y tengo mascota");
             document.write("- Mi nombre es " + name + " " + surname + ", tengo " + age + " años y tengo mascota");
@@ -19,6 +19,16 @@
             console.log("Mi nombre es " + name + " " + surname + ", tengo " + age + " años y no tengo mascota");
             document.write("- Mi nombre es " + name + " " + surname + ", tengo " + age + " años y no tengo mascota");
         }
+    </script>
+    <h4>Crear un sistema de cálculo</h4>
+    <script>
+        x= 6;
+        y= 8;
+        document.write("La suma de " + x + " y " + y + " da " + sum(x,y));
+        operador1 = 23;
+        operador2 = 56;
+        operante = "*"
+        document.write("<br>La operación de " + operador1 + operante + operador2 + " es igual a " + calcul(operador1, operador2, operante))
     </script>
 </body>
 </html>
