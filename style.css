@@ -1,0 +1,15 @@
+* {
+    font-family: arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+#htmlIMG {
+    width: 100px;
+}
+
+#htmlIMG:hover {
+    cursor: pointer;
+}

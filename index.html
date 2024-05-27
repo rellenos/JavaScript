@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer script</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Primer script</h1>
+    <hr>
+    <h3>Prueba de 'document.Write'</h3>
+    <script language="JavaScript">
+        document.write("Este navegador tiene la versión: <br>" + navigator.appVersion);
+        document.write ("<br> de <B>" + navigator.appName + "</B>.");
+    </script>
+    <h3>Ejemplo de variables enteras</h3>
+    <script lang="JavaScript">
+        const nombre ="Jordi";
+        document.write("Muestro el valor de la constante 'nombre': " + nombre);
+        naturalX = 5; //asignacion de valor 5 a naturalX
+        document.write("<br>El valor de la variable <b>naturalX</b> es: " + naturalX);
+        naturalX = 7; //asignacion de valor 7 a naturalX
+        document.write("<br>El nuevo valor de la variable <b>naturalX</b> es: " + naturalX);
+        naturalX = naturalX + 1; //suma 1 al valor de naturalX 
+        document.write("<br>Ahora el valor de la variable <b>naturalX</b> es: " + naturalX);
+        naturalX ++; // Lo mismo que naturalX = naturalX + 1
+        document.write("<br>Ahora hemos incrementado en 1 el valor de la variable <b>naturalX</b> que es: " + naturalX);
+        naturalX += 3; //suma 3 al valor de naturalX. Lo mismo que poner naturalX = naturalX + 3
+        document.write("<br>El valor de la variable <b>naturalX</b> es ahora: " + naturalX);
+        naturalX *= 2; //multiplicar un numero. Lo mismo que poner naturalX = naturalX * 2
+        document.write("<br>Multiplico el valor de la variable <b>naturalX</b> por 2: " + naturalX);
+        naturalX **= 2; //elevar un numero. Lo mismo que poner naturalX = naturalX ** 2
+        document.write("<br>Elevamos a 2 el valor de la variable <b>naturalX</b> : " + naturalX );
+    </script>
+    <h3>Ejemplo de variables decimales</h3>
+    <script lang="JavaScript">
+        varDecimal1 = 1.25;
+        varDecimal2 = 2.65;
+        varResult = 0;
+        document.write("El valor de <b>varDecimal1</b> es: " + varDecimal1);
+        document.write("<br>El valor de <b>varDecimal2</b> es: " + varDecimal2);
+        varResult = varDecimal1 + varDecimal2;
+        document.write("<br>La suma de <b>varDecimal1</b> y <b>varDecimal2</b> es: " + varResult);
+        varDecimal1 ++;
+        document.write("<br>El valor de <b>varDecimal1</b> es: " + varDecimal1);
+        varDecimal1 -= 10;
+        document.write("<br>El valor de <b>varDecimal1</b> - 10 es: " + varDecimal1);
+    </script>
+    <h3>Ejemplo de tipos string</h3>
+    <script lang="JavaScript">
+        apellido = "Rodriguez";
+        document.write("El valor de apellido es: " + apellido);
+        apellido = apellido + " Perez";
+        document.write("<br>El valor de apellido es: " + apellido);
+        apellido += " de todos los Santos";
+        document.write("<br>El valor de apellido es: " + apellido);
+    </script>
+    <h3>Ejemplo de boolean</h3>
+    <script lang="JavaScript">
+        verdadero = true;
+        falso = false;
+        document.write("El valor de <b>verdadero</b> es " + verdadero + "<br>");
+        document.write(falso + verdadero + "<br>"); //el conector + equivale a OR
+        document.write(falso + falso + "<br>");
+        document.write(verdadero * falso + "<br>"); //el conector * equivale a AND
+        document.write(verdadero + 4 + "<br>");
+    </script>
+    <h3>Arrays</h3>
+    <script lang="JavaScript">
+        alumnos = ["Dany", "Laura", "Jorge", "Mina", "Dani"]; //define una lista
+        cosas = [["verde","amarillo","rojo","azul"], ["platano","fresa","mandarina","kiwi"], ["primavera","verano","otoño","invierno"], ["seat", "renault", "honda", "ford"]]; //define listas dentro de otra
+        document.write("Los alumnos del viernes son " + alumnos + "<br>"); //muestra en pantalla los elementos de la lista
+        document.write("El primer alumno de la lista es: " + alumnos[0] + "<br>"); //muestra en pantalla un elemento en particular de la lista
+        document.write("el coche " + cosas[3][0] + " es de color " + cosas[0][1] + "<br>"); //muestra en pantalla un elemento dentro de otro elemento de la lista
+        document.write("la " + cosas[1][2] + " se consume típicamente en " + cosas[2][3] + "<br>")
+        document.write("La fecha ahora mismo es: " + new Date(Date.now()) + "<br>"); //muestra la fecha y hora actual
+        document.write("La lista alumnos tiene " + alumnos.length + " alumnos" + "<br>"); //muestra cuantos items tiene una lista
+        document.write("Lista ordenada: " + alumnos.sort() + "<br>"); //muestra los items de la lista ordenados alfabéticamente
+        document.write("Lista ordenada inversa: " + alumnos.sort().reverse() + "<br>"); //muestra los items de la lista ordenados alfabéticamente y descendentemente
+    </script>
+    <h3>Función 'onclick'</h3>
+    <img id="htmlIMG" src="./174854.png" alt="logo de html" onclick="showName(), changeColor()">
+    <script lang="JavaScript">
+        function showName() {
+            alert('Logo de HTML')
+        }
+
+        function changeColor() {
+            
+        }
+    </script>
+</body>
+</html>
