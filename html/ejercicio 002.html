@@ -26,6 +26,7 @@
         num2 = prompt("escriu el segon numero");
         alert("El resultat es " + num1 + num2);
     </script> -->
+
     <!-- <script> // solució de classe
         alert("El resultat es " + (+prompt("escriu el primer numero") + +prompt("escriu el segon numero")));
     </script> -->
@@ -49,8 +50,7 @@
             document.write("El numero mes gran es " + num1);
         else if (num2 > num1 + num3)
             document.write("El numero mes gran es " + num2);
-            else 
-                document.write("El numero mes gran es " + num3);
+            else {document.write("El numero mes gran es " + num3);}
     </script>
     <h4>8- Escriviu un programa que demani un número i digui si és divisible per 2.</h4>
     <script>
@@ -73,12 +73,79 @@
             i++;
         }
         //quan el nombre de i superi el nombre de lletres que te la frase, trencarà el loop (frase.length)
+        document.write(frase + "<hr>")
         document.write("La frase té " + comptador + " a")
     </script>
     <h4>10- Escriviu un programa que demani una frase i escrigui les vocals que apareixen.</h4>
+    <script>
+        frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea inventore veniam ex distinctio maiores ullam illo neque labore adipisci, corporis facere asperiores. Laborum magnam numquam ducimus eius blanditiis soluta?";
+        vocals = "";
+        i = 0;
+        while (i <= frase.length) {
+            if (frase.substr(i,1) == "a" || frase.substr(i,1) == "e" || frase.substr(i,1) == "i" || frase.substr(i,1) == "o" || frase.substr(i,1) == "u") {
+                vocals += frase.substr(i,1);
+            }
+            i++;
+        }
+        document.write(frase + "<hr>");
+        document.write(vocals);
+    </script>
     <h4>11- Escriviu un programa que demani una frase i escrigui quantes lletres són vocals.</h4>
+    <script>
+        frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea inventore veniam ex distinctio maiores ullam illo neque labore adipisci, corporis facere asperiores. Laborum magnam numquam ducimus eius blanditiis soluta?";
+        comptador = 0; i=0;
+        while (i <= frase.length) {
+            if (frase.substr(i, 1) === "a" || frase.substr(i, 1) === "e" || frase.substr(i, 1) === "e" || frase.substr(i, 1) === "i" || frase.substr(i, 1) === "o" || frase.substr(i, 1) === "u") {
+                comptador++;
+            }
+            i++;
+        }
+        document.write(frase + "<hr>");
+        document.write("La frase té " + comptador + " vocals");
+    </script>
     <h4>12- Escriviu un programa que demani una frase i escrigui quantes vegades apareixen cada una de les vocals.</h4>
+    <script>
+        frase = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus cum aperiam labore. Obcaecati provident ratione optio aperiam voluptatum mollitia, necessitatibus minima totam. Ut dignissimos unde corporis repellendus possimus laborum aliquam delectus perspiciatis, quasi nihil, quae sapiente nesciunt dolorum quo adipisci amet, veritatis nobis modi. Labore sequi asperiores dicta magnam mollitia quis aliquam est odio, aut et omnis soluta perspiciatis veritatis consequatur accusantium reiciendis dignissimos, libero minus? Aperiam odio id animi aut et ex. Magnam, quisquam! Recusandae totam dignissimos laboriosam ducimus eos neque sequi ullam voluptates non, tenetur quisquam dolor enim similique. Animi modi architecto ad, pariatur possimus debitis expedita.";
+        comptadorA = 0; comptadorE = 0; comptadorI = 0; comptadorO = 0; comptadorU = 0;
+        i=0;
+        while (i <= frase.length) {
+            if (frase.substr(i, 1) === "a" || frase.substr(i, 1) === "A") {
+                comptadorA++;
+            }
+            else if (frase.substr(i, 1) === "e" || frase.substr(i, 1) === "E") {
+                comptadorE++;
+            }
+            else if (frase.substr(i, 1) === "i" || frase.substr(i, 1) === "I") {
+                comptadorI++;
+            }
+            else if (frase.substr(i, 1) === "o" || frase.substr(i, 1) === "O") {
+                comptadorO++;
+            }
+            else if (frase.substr(i, 1) === "u" || frase.substr(i, 1) === "U") {
+                comptadorU++;
+            }
+            i++;
+        }
+        document.write(frase + "<hr>");
+        document.write("La frase té <br> " + comptadorA + " a <br>" + comptadorE + " e <br>" + comptadorI + " i <br>" + comptadorO + " o <br>" + comptadorU + " u <br>");
+    </script>
     <h4>13- Escriviu un programa que demani un número i ens digui si és divisible per 2, 3, 5 o 7 (sólo cal comprobar si ho és per un dels quatre).</h4>
+    <script>
+        num = 7
+        if (num %2 == 0) {
+            document.write("El numero " + num + " és divisible per 2")
+        }
+        else if (num %3 == 0) {
+            document.write("El numero " + num + " és divisible per 3")
+        }
+        else if (num %5 == 0) {
+            document.write("El numero " + num + " és divisible per 5")
+        }
+        else if (num %7 == 0) {
+            document.write("El numero " + num + " és divisible per 7")
+        }
+        else {document.write("El numero " + num + " no es divisible per 2, 3, 5 o 7")}
+    </script>
     <h4>14- Afegir a l'exercici anterior que ens digui quin dels quatre és divisible (s'han de dir tots pels que és divisible).</h4>
     <h4>15- Escriviu un programa que mostri per pantalla els divisors d'un número donat.</h4>
     <h4>16- Escriviu un programa que mostri per pantalla els divisors comuns de dos números donats.</h4>
