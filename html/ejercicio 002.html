@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+    <hr>
+    <h2>Completa estos ejercicios</h2>
+    <h4>1- Escribe un programa de una sola linea que haga que aparezca en la pantalla un alert que diga 'Hola mundo'</h4>
+    <!-- <script>alert("Hola mundo")</script> -->
+    <h4>2- Escribe un programa de una sola linea que escriba en la pantalla un texto que diga 'Hola mundo'</h4>
+    <script>document.write("Hola mundo")</script>
+    <h4>3- Escribe un programa de una sola linea que escriba en la pantalla el resultado de sumar 3 + 5</h4>
+    <script>document.write(3+5)</script>
+    <h4>4- Escriviu un programa de dues línies que demani el nom de l'usuari amb un prompt i escrigui un text que digui “Hola nomUsuari”</h4>
+    <!-- <script>
+        nom = prompt("escribe tu nombre de usuario");
+        alert("hola " + nom);
+    </script> -->
+    <h4>5- Escriviu un programa de tres línies que demani un número, demani un altre número i escrigui el resultat de resum aquests dos números.</h4>
+    <!-- <script>
+        num1 = prompt("escriu el primer numero");
+        num2 = prompt("escriu el segon numero");
+        alert("El resultat es " + num1 + num2);
+    </script> -->
+    <!-- <script> // solució de classe
+        alert("El resultat es " + (+prompt("escriu el primer numero") + +prompt("escriu el segon numero")));
+    </script> -->
+    <h4>6- Escriviu un programa que demani dos números i escrigui a la pantalla quin és el major.</h4>
+    <script>
+        num1 = 672;
+        num2 = 341;
+        document.write(num1 + " i " + num2 + "<br>");
+        if (num1 > num2)
+            document.write("El numero mes gran es " + num1);
+        else
+            document.write("El numero mes gran es " + num2);
+    </script>
+    <h4>7- Escriviu un programa que demani 3 números i escrigui a la pantalla el major dels tres.</h4>
+    <script>
+        num1 = 118;
+        num2 = 45;
+        num3 = 739;
+        document.write(num1 + ", " + num2 + " i " + num3 + "<br>");
+        if (num1 > num2 + num3)
+            document.write("El numero mes gran es " + num1);
+        else if (num2 > num1 + num3)
+            document.write("El numero mes gran es " + num2);
+            else 
+                document.write("El numero mes gran es " + num3);
+    </script>
+    <h4>8- Escriviu un programa que demani un número i digui si és divisible per 2.</h4>
+    <script>
+        num1 = 243;
+        if (num1 %2 == 0)
+            document.write(num1 + " es divisible entre 2");
+        else
+            document.write(num1 + " no es divisible entre 2");
+    </script>
+    <h4>9- Escriviu un programa que demani una frase i escrigui quantes vegades apareix la lletra a.</h4>
+    <script>
+        frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea inventore veniam ex distinctio maiores ullam illo neque labore adipisci, corporis facere asperiores. Laborum magnam numquam ducimus eius blanditiis soluta?";
+        comptador = 0; i=0; //inicialitzem les variables a 0
+        //loop per recòrres la frase lletra per lletra
+        while (i <= frase.length) {
+            //buscarà les lletres definides
+            if (frase.substr(i, 1) === "a" || frase.substr(i, 1) === "A") {
+                comptador++; //si troba una de les lletres, sumarà +1 al comptador
+            }
+            i++;
+        }
+        //quan el nombre de i superi el nombre de lletres que te la frase, trencarà el loop (frase.length)
+        document.write("La frase té " + comptador + " a")
+    </script>
+    <h4>10- Escriviu un programa que demani una frase i escrigui les vocals que apareixen.</h4>
+    <h4>11- Escriviu un programa que demani una frase i escrigui quantes lletres són vocals.</h4>
+    <h4>12- Escriviu un programa que demani una frase i escrigui quantes vegades apareixen cada una de les vocals.</h4>
+    <h4>13- Escriviu un programa que demani un número i ens digui si és divisible per 2, 3, 5 o 7 (sólo cal comprobar si ho és per un dels quatre).</h4>
+    <h4>14- Afegir a l'exercici anterior que ens digui quin dels quatre és divisible (s'han de dir tots pels que és divisible).</h4>
+    <h4>15- Escriviu un programa que mostri per pantalla els divisors d'un número donat.</h4>
+    <h4>16- Escriviu un programa que mostri per pantalla els divisors comuns de dos números donats.</h4>
+    <h4>17- Escriure un programa que ens digui si un número donat és primer (no és divisible per ningun altre número que no sigui ell mateix o la unitat).</h4>
+</body>
+</html>
