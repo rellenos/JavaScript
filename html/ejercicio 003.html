@@ -11,6 +11,108 @@
     <h2>Completa aquests excercicis</h2>
     <script>console.time();</script>
     <h4>1- Escriure una funció anomenada `contrasenyaValida` que rebi un string i retorni `true` si el string és igual a "2Fj(jjbFsuj" o "eoZiugBf&g9". En cas contrari ha de retornar `false`).</h4>
+    <script>
+        contrasenya1 = "2Fj(jjbFsuj";
+        contrasenya2 = "eoZiugBf&g9"
+        contrasenyaValida = true;
+        if (contrasenya1 == "2Fj(jjbFsuj" || contrasenya2 == "eoZiugBf&g9") {
+            contrasenyaValida = true;
+            document.write("La contrasenya es vàlida");
+        }
+        else {
+            contrasenyaValida = false;
+            document.write("La contrasenya no es vàlida");
+        }
+    </script>
+    <h4>2- Escriure una funció anomenada `calcularImpostos` que rebi dos arguments numèrics: `edat` i `ingressos`. Si `edat` és igual o major a 18 i els ingressos són iguals o majors a 1000 ha de retornar `ingressos` * 40%. En cas contrari retornar 0.</h4>
+    <!-- <script>
+        edat = parseInt(prompt("Introdueix la teva edat"));
+        ingressos = parseInt(prompt("Introdueix els teus ingressos"));
+        if (edat >= 18 && ingressos >= 1000) {
+            document.write("Ingressos despres de imposts: " + ingressos*(40/100));
+        }
+        else {
+            document.write(ingressos);
+        }
+    </script> -->
+    <h4>3- L'índex de massa corporal (IMC), o BMI per les sigles en anglès, és un valor que determina la quantitat de greix d'una persona. El BMI es calcula amb la fórmula següent: `pes / altura^2`. Escriure una funció anomenada `bmi` que rebi dos arguments: pes i altura, i retorni un string amb les possibilitats següents:
+    <br>* "Baix de pes" si el BMI < 18.5
+    <br>* "Normal" si està entre 18.5 i 24.9
+    <br>* "Sobrepès" si està entre 25 i 29.9
+    <br>* "Obès" si és igual o major a 30</h4>
+    <!-- <script>
+        pes = parseInt(prompt("Introdueix el teu pes en kg"));
+        altura = parseInt(prompt("Introdueix la teva alçada en cm"));
+        bmi = pes/((altura/100)**2);
+        if (bmi <= 18.5) {document.write("Baix de pes (" + bmi + ")")}
+        else if (bmi > 18.5 && bmi <= 24.9) {document.write("Normal (" + bmi + ")")}
+        else if (bmi > 24.9 && bmi <= 29.9) {document.write("Sobrepès (" + bmi + ")")}
+        else if (bmi > 29.9) {document.write("Obès (" + bmi + ")")}
+    </script> -->
+    <h4>4- Escriure una funció anomenada `imprimirArray` que rebi un array i imprimeixi cada element en una línia a part:</h4>
+    <!-- <script>
+        dades = prompt("Introdueix diferents dades separades per comes:");
+        array = dades.split(',');
+        array.forEach(function(element) {
+            document.write(element + "<br>");
+        });
+    </script> -->
+    <h4>5- Escriu una funció anomenada `likes` que rebi un número i retorni un string utilitzant el format de K per a milers i M per a milions. Per exemple:
+    <br>* 1400 es converteix en 1K
+    <br>* 34,567 es converteix en 34K
+    <br>* 7,456,345 es converteix en 7M.
+    <br>Si el nombre és menor a 1000, s'ha de tornar el mateix nombre com un string.</h4>
+    <!-- <script>
+        likes = prompt("Introdueix el numero de likes");
+        
+        if (likes < 1000) {
+            Math.trunc(likes);
+            document.write(likes);
+        }
+        else if (likes >= 1000 && likes <= 1000000) {
+            Math.trunc(likes);
+            document.write(likes / 1000 + "K");
+        }
+        else if (likes >= 1000000) {
+            Math.trunc(likes);
+            document.write(likes / 1000000 + "M");
+        }
+    </script> -->
+    <h4>6- Escriure una funció anomenada `fizzBuzz` que rebi un número i retorni un string d'acord amb el següent:
+    <br>* "fizz" si el nombre és múltiple de 3.
+    <br>* "buzz" si el nombre és múltiple de 5.
+    <br>* "fizzbuzz" si el nombre és múltiple tant de 3 com de 5.
+    <br>* Si no compleix cap de les condicions anteriors ha de retornar el mateix número.</h4>
+    <!-- <script>
+        num = parseInt(prompt("Introdueix un numero"))
+        if (num %3 == 0 && num %5 == 0) {
+            document.write("fizzbuzz");
+        }
+        else if (num %3 == 0) {
+            document.write("fizz");
+        }
+        else if (num %5 == 0) {
+            document.write("fuzz");
+        }
+        else {document.write(num);}
+    </script> -->
+    <h4>7- Escriure una funció anomenada `comptarRang` que rebi dos números i retorni quants n'hi ha entre ells (excloent-los):
+    <br>**Nota:** Utilitza un cicle a la teva solució. Pots assumir que el primer número serà menor que el segon.</h4>
+    <!-- <script>
+        num1 = parseInt(prompt("Introdueix el primer numero"))
+        num2 = parseInt(prompt("Introdueix el segon numero"))
+        i = 0;
+        comptador = 0;
+        for (i = num1; i <= num2; i++) {
+            comptador++;
+        }
+        document.write(comptador-2);
+    </script> -->
+    <h4>8- Escriure una funció anomenada `sumarRang` que rebi dos arguments: número inicial i número final. La funció ha de retornar la suma dels números en aquest rang (incloent-los).
+    <br>**Nota:** pots assumir que el número inicial serà menor o igual que el número final.</h4>
+    <script>
+
+    </script>
+    </body>
     <script>console.timeEnd();</script>
-</body>
-</html>
+    </html>
