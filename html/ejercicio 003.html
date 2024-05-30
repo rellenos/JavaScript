@@ -12,15 +12,13 @@
     <script>console.time();</script>
     <h4>1- Escriure una funció anomenada `contrasenyaValida` que rebi un string i retorni `true` si el string és igual a "2Fj(jjbFsuj" o "eoZiugBf&g9". En cas contrari ha de retornar `false`).</h4>
     <script>
-        contrasenya1 = "2Fj(jjbFsuj";
-        contrasenya2 = "eoZiugBf&g9"
-        contrasenyaValida = true;
-        if (contrasenya1 == "2Fj(jjbFsuj" || contrasenya2 == "eoZiugBf&g9") {
-            contrasenyaValida = true;
+        contrasenya = "";
+        if (contrasenya == "2Fj(jjbFsuj" || contrasenya == "eoZiugBf&g9") {
+            return true;
             document.write("La contrasenya es vàlida");
         }
         else {
-            contrasenyaValida = false;
+            return false;
             document.write("La contrasenya no es vàlida");
         }
     </script>
@@ -49,6 +47,16 @@
         else if (bmi > 24.9 && bmi <= 29.9) {document.write("Sobrepès (" + bmi + ")")}
         else if (bmi > 29.9) {document.write("Obès (" + bmi + ")")}
     </script> -->
+    <script> //exemple de classe
+        function imc(pes, altura) {
+            bmi = pes/((altura/100)**2);
+            if (bmi < 18.5){return "baix de pes"};
+            if (bmi < 24.9){return "normal"};
+            if (bmi < 29.9){return "sobrepès"};
+            return ("obès");
+        }
+        console.log(imc(65, 170));
+    </script>
     <h4>4- Escriure una funció anomenada `imprimirArray` que rebi un array i imprimeixi cada element en una línia a part:</h4>
     <!-- <script>
         dades = prompt("Introdueix diferents dades separades per comes:");
@@ -57,6 +65,16 @@
             document.write(element + "<br>");
         });
     </script> -->
+    <script> //exemple de clase
+        function imprimirArray() {
+            i = 0;
+            while (i < arguments.length) {
+                document.write(arguments[i] + "<br>");
+                i++;
+            }
+        }
+        console.log(imprimirArray(1, "hola", 2, "món"));
+    </script>
     <h4>5- Escriu una funció anomenada `likes` que rebi un número i retorni un string utilitzant el format de K per a milers i M per a milions. Per exemple:
     <br>* 1400 es converteix en 1K
     <br>* 34,567 es converteix en 34K
@@ -71,13 +89,31 @@
         }
         else if (likes >= 1000 && likes <= 1000000) {
             Math.trunc(likes);
-            document.write(likes / 1000 + "K");
+            document.write((likes/1000) + "K");
         }
         else if (likes >= 1000000) {
             Math.trunc(likes);
-            document.write(likes / 1000000 + "M");
+            document.write((likes/1000000) + "M");
         }
     </script> -->
+    <script>
+        function likes(num) {
+            if num < 1000) {
+                return (num);
+            }
+            if num <1000000) {
+                return (num.substr(0,num.length-3) + " K");
+            }
+            if num >= 1000000) {
+                return (num.substr(0,num.lenth-6) + " M");
+            }
+        }
+        console.log(likes(983)) // "983"
+        console.log(likes(1900)) // "1K"
+        console.log(likes(54000)) // "54K"
+        console.log(likes(120800)) // "120K"
+        console.log(likes(25222444)) // "25M"
+    </script>
     <h4>6- Escriure una funció anomenada `fizzBuzz` que rebi un número i retorni un string d'acord amb el següent:
     <br>* "fizz" si el nombre és múltiple de 3.
     <br>* "buzz" si el nombre és múltiple de 5.
@@ -113,6 +149,94 @@
     <script>
 
     </script>
+    <h4>9- Escriure una funció anomenada `numeroDeAes` que rebi un string i retorni el nombre de vegades que apareix la lletra "a":</h4>
+    <!-- <script>
+        frase = prompt("Intrudeix una frase");
+        comptador = 0;
+        i=0;
+        while (i <= frase.length) {
+            if (frase.substr(i, 1) === "a" || frase.substr(i, 1) === "A") {
+                comptador++;
+            }
+            i++;
+        }
+        document.write(frase + "<hr>")
+        document.write("La frase té " + comptador + " a")
+    </script> -->
+    <h4>10- Escriure una funció anomenada `numeroDeCaracters` que rebi un string i un caràcter (un string d'un caràcter). La funció ha de retornar el nombre de vegades que apareix el caràcter al string.</h4>
+    <!-- <script>
+        frase = prompt("Intrudeix una frase");
+        lletra = prompt("Introdueix la lletra que vols analitzar")
+        comptador = 0;
+        i=0;
+        while (i <= frase.length) {
+            if (frase.substr(i, 1) === lletra) {
+                comptador++;
+            }
+            i++;
+        }
+        document.write(frase + "<br>Lletra: " + lletra + "<hr>")
+        document.write("La frase té " + comptador + " " + lletra)
+    </script> -->
+    <h4>11- Escriure una funció anomenada `sumarArray` que rebi un array de números i retorni la suma de tots els elements.</h4>
+    <!-- <script>
+        numeros = prompt("Introdueix una llista de numeros separats per comes");
+        total = 0;
+        array = numeros.split(',').map(Number);
+        for (let i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        console.log(total);
+        document.write("Numeros introduïts: " + numeros + "<br>Resultat de la suma: " + total);
+    </script> -->
+    <h4>12- Escriure una funció anomenada `multiplicarArray` que rebi un arranjament de números i retorni la multiplicació de tots els elements.</h4>
+    <!-- <script>
+        numeros = prompt("Introdueix una llista de numeros separats per comes");
+        total = 1;
+        array = numeros.split(',').map(Number);
+        for (let i = 0; i < array.length; i++) {
+            total *= array[i];
+        }
+        console.log(total);
+        document.write("Numeros introduïts: " + numeros + "<br>Resultat de la multiplicació: " + total);
+    </script> -->
+    <h4>13- Escriure una funció anomenada `treureZeros` que rebi un array de números i retorni un nou array excloent els zeros (0).</h4>
+    <!-- <script>
+        numeros = prompt("Introudeix una llista de numeros separats per comes");
+        array = numeros.split(',').splice(1,"0");
+        array.forEach(function(element) {
+            document.write(element);
+        });
+    </script> -->
+    <h4>14- Escriure una funció anomenada `transcriure` que rebi un string (una cadena d'ADN) i retorni un altre string (el vostre complement ARN).
+    <br>Els complements són els següents:
+    <br>* G -> C
+    <br>* C -> G
+    <br>* T -> A
+    <br>* A -> U</h4>
+    <!-- <script>
+        text = prompt("Introdueix el teu ADN per convertirlo en ARN");
+        document.write("ADN: " + text);
+        text = text.replaceAll("G","D");
+        text = text.replaceAll("C","H");
+        text = text.replaceAll("T","U");
+        text = text.replaceAll("A","N");
+        // switch (text) {
+        //     case "G":
+        //         text = text.replace("G","C");
+        //         break;
+        //     case "C":
+        //         text = text.replace("C","G");
+        //         break;
+        //     case "T":
+        //         text = text.replace("T","A");
+        //         break;
+        //     case "A":
+        //         text = text.replace("A","U");
+        //         break;
+        //     }
+        document.write("<br>ARN: " + text);
+    </script> -->
     </body>
     <script>console.timeEnd();</script>
     </html>
