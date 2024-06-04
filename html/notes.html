@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <hr>
+    <script>
+        const car = {
+            brand: "Fiat",
+            model: "500",
+            weight: 1000,
+            color: "Blanc",
+            allProperties: function(){
+                return this.brand + " " + this.model + ", " + this.color + ", " + this.weight + "kg, ";
+            }
+        }
+        document.write("El cotxe original creat és<br>" + car.allProperties());
+    </script>
+    <hr>
+    <script>
+        car.color = "Verd";
+        document.write("El cotxe original creat és<br>" + car.allProperties());
+        car.lenght = 2.5;
+        document.write(" " + car.lenght + "m");
+        document.write("<br>El cotxe original creat és<br>" + car.allProperties());
+    </script>
+    <script>
+        llista = ["Vero", "DD", "Billy", "Jorge", "Mina", "DM"];
+        i = 0;
+        while (i < llista.length) {
+            console.log(llista[i]);
+            i++
+        }
+
+        for (element in llista){
+            console.log(llista[element]);
+        }
+    </script>
+    <h3>Exemplificar classes i objectes</h3>
+    <hr>
+    <script>
+        class motorbike {
+            constructor(owner, name, year, color, hp) {
+                this.owner = owner;
+                this.name = name;
+                this.year = year;
+                this.color = color;
+                this.hp = hp;
+            }
+            antiguitat() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        document.write("Crearem una motocicleta: <br>");
+        motoEnric = new motorbike("Enric","Yamaha", 2021, "vermell", 300);
+        document.write("La moto d'en " + motoEnric.owner + " es una " + motoEnric.name + " de l'any " + motoEnric.year + ". Té " + motoEnric.antiguitat() + " anys d'antiguitat" + ", es de color " + motoEnric.color + " i compta amb " + motoEnric.hp + " cavalls de potència.<br>");
+        motoJoan = new motorbike("Joan","BMW", 1998, "blau", 230);
+        document.write("La moto d'en " + motoJoan.owner + " es una " + motoJoan.name + " de l'any " + motoJoan.year + ". Té " + motoJoan.antiguitat() + " anys d'antiguitat" + ", es de color " + motoJoan.color + " i compta amb " + motoJoan.hp + " cavalls de ptència.");
+
+    </script>
+</body>
+</html>

@@ -98,14 +98,14 @@
     </script> -->
     <script>
         function likes(num) {
-            if num < 1000) {
-                return (num);
+            if (num < 1000) {
+                return num;
             }
-            if num <1000000) {
-                return (num.substr(0,num.length-3) + " K");
+            if (num <1000000) {
+                return (Math.trunc(num/1000) + " K");
             }
-            if num >= 1000000) {
-                return (num.substr(0,num.lenth-6) + " M");
+            if (num >= 1000000) {
+                return (Math.trunc(num/1000000) + " M");
             }
         }
         console.log(likes(983)) // "983"
@@ -208,7 +208,12 @@
             document.write(element);
         });
     </script> -->
-    <h4>14- Escriure una funció anomenada `transcriure` que rebi un string (una cadena d'ADN) i retorni un altre string (el vostre complement ARN).
+    <h4>14- Escriure una funció anomenada `sumarArray` que rebi tres arguments: un array de números, la posició inicial i la posició final. La funció ha de retornar la suma de tots els números dins del rang (la posició inicial i la posició final, incloent-les).
+    <br>**Nota:** pots assumir que la posició inicial serà menor o igual a la posició final, i que estan dins dels límits de l'array.</h4>
+    <script>
+
+    </script>
+    <h4>15- Escriure una funció anomenada `transcriure` que rebi un string (una cadena d'ADN) i retorni un altre string (el vostre complement ARN).
     <br>Els complements són els següents:
     <br>* G -> C
     <br>* C -> G
@@ -237,6 +242,20 @@
         //     }
         document.write("<br>ARN: " + text);
     </script> -->
+    <h4>16- Escriure una funció anomenada `capitalitzar` que rebi un string i capitalitzi la primera lletra:</h4>
+    <script>
+        // frase = prompt("Introdueix una frase:");
+        // function capitalizar(frase) {
+        //     return string.charAt(0).toUpperCase() + string.slice(1);
+        // }
+        // document.write(frase);
+
+        string = prompt("we");
+        function capitalitzar(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        console.log(capitalitzar("hola caracola"))
+    </script>
     </body>
     <script>console.timeEnd();</script>
     </html>
