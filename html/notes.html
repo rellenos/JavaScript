@@ -8,6 +8,7 @@
 <body>
     <h1>Notas</h1>
     <hr>
+    <h2>Classes i objectes</h2>
     <script>
         const car = {
             brand: "Fiat",
@@ -40,7 +41,7 @@
             console.log(llista[element]);
         }
     </script>
-    <h3>Exemplificar classes i objectes</h3>
+    <h3>Exemplificar</h3>
     <hr>
     <script>
         class motorbike {
@@ -62,7 +63,112 @@
         document.write("La moto d'en " + motoEnric.owner + " es una " + motoEnric.name + " de l'any " + motoEnric.year + ". Té " + motoEnric.antiguitat() + " anys d'antiguitat" + ", es de color " + motoEnric.color + " i compta amb " + motoEnric.hp + " cavalls de potència.<br>");
         motoJoan = new motorbike("Joan","BMW", 1998, "blau", 230);
         document.write("La moto d'en " + motoJoan.owner + " es una " + motoJoan.name + " de l'any " + motoJoan.year + ". Té " + motoJoan.antiguitat() + " anys d'antiguitat" + ", es de color " + motoJoan.color + " i compta amb " + motoJoan.hp + " cavalls de ptència.");
-
     </script>
+    <h2>Loops y contadores</h2>
+    <hr>
+    <script>
+        i= 0; j= 1;
+        while (i < 10) {
+            i++;
+            j*=2;
+        }
+        document.write("El valor de j és " + j)
+    </script>
+    <h3>Continue</h3>
+    <script>
+        i= 0; j= 1;
+        while (i < 10) {
+            i++;
+            if (i == 5) {
+                continue; //omet les instruccions següents y torna al bucle
+                }
+            j*=2;
+        }
+        document.write("El valor de j és " + j)
+    </script>
+    <h3>Break</h3>
+    <script>
+        i= 0; j= 1;
+        while (i < 10) { // alternatiu: while (i < 10 && i != 3)
+            i++;
+            if (i == 3) {
+                break; //surt del bucle
+                }
+            j*=2;
+        }
+        document.write("El valor de j és " + j + "<br><br>")
+    </script>
+    <script>
+        i= 0;
+        while (i < 10) {
+            j= 0;
+            while (j < 10) {
+                j++;
+                document.write("i val " + i + " i la j és " + j + "<br>");
+                if (j == 2) {
+                    break;
+                }
+            }
+            i++;
+        }
+    </script>
+    <h2>Exemples</h2>
+    <hr>
+    <h3>Calcular l'àrea d'un triangle</h3>
+        <script>
+            let base = 3;
+            let altura = 5;
+            function areaTriangle(base, altura) {
+                console.log(arguments);
+                resultat = parseFloat(base*altura/2);
+                return resultat;
+            }
+            document.write("l'àrea del triangle amb base " + base + " i altura " + altura + " és " + areaTriangle(base, altura) + "<br>")
+        </script>
+    <h3>IsNan</h3>
+        <script>
+            let nom = "Enric";
+            let esNumoNo = isNaN(nom);
+            document.write("El valor de esNumoNo és: " + esNumoNo + "<br>");
+            let edat = 22;
+            esNumoNo = isNaN(edat);
+            document.write("El valor de esNumoNo és: " + esNumoNo + "<br>");
+        </script>
+    <h3>isFinite</h3>
+        <script>
+            let valor = 3/5;
+            document.write("Es infinit el valor " + valor + "? " + isFinite(valor) + "<br>");
+            valor = 10/0;
+            document.write("Es infinit el valor " + valor + "? " + isFinite(valor));
+        </script>
+    <h3>Number</h3>
+        <script>
+            let n1 = new Number(0);
+            let n2 = new Number("Cadena");
+            let n3 = new Number("12345678")
+            document.write(n1 + "<br>");
+            document.write(n2 + "<br>");
+            document.write(n3 + "<br>");
+        </script>
+    <h3>Trycatch</h3>
+        <script>
+            // onError = maneja_error;
+            // let missatge = "";
+            // function maneja_error(msg, url, l) {
+            //     missatge = "Hi ha un error"
+            // }
+            try {
+                function dividir(a,b) {
+                    return a/b;
+                }
+                a = "10";
+                resultat = dividir(a,b);
+                document.write(resultat);
+            }
+            catch(e) {
+                document.write("Descripció del error: <br>" + e.description + "<br>")
+                document.write("Nombre del error: <br>" + e.number + "<br>")
+            }
+        </script>
 </body>
 </html>

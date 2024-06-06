@@ -63,7 +63,7 @@
         document.write("Piràmide invertida:<br><pre>*********<br> ******* <br>  *****  <br>   ***   <br>    *    </pre>");
         document.write("Diamant:<br><pre>    *    <br>   ***   <br>  *****  <br> ******* <br>  *****  <br>   ***   <br>    *    </pre>");
     </script>
-    <h3>5 Array</h3>
+    <h3>5 Arrays</h3>
     <h4>Donat l'array = [1,2,3,4,5,6]
     <br>5.1 Iterar per tots els elements dins un array utilitzant `while` i mostrar-los a la pantalla.</h4>
         <script>
@@ -133,13 +133,39 @@
         </script>
     <h4>7.2 Crear una funció que divideixi un array en dues parts amb la mateixa quantitat d'elements (o una diferència de màxim un element) i torni un array que contingui el grup1 i el grup2.</h4>
         <script>
-            var arr = [1,2,3,4,5,6,7,8];
-            mitad = arr.length / 2;
-            primeraMitad = arr.slice(0, mitad);
-            segundaMitad = arr.slice(mitad);
-            document.write(Array.from(primeraMitad) + "<br>" + Array.from(segundaMitad));
+            var arr = [1,2,3,4,5,6,7,8]; //donar l'array
+            mitad = arr.length / 2; //saber quina es la meitat de l'array, independentment de quina sigui la seva llargada
+            primeraMitad = arr.slice(0, mitad); //fem un slice desde el'inici fins a la meitat, que estarà condicionat amb el numero que sortirà al fer la meitat a dalt
+            segundaMitad = arr.slice(mitad); //fem slice desde la meitat fins al final
+            document.write(Array.from(primeraMitad) + "<br>" + Array.from(segundaMitad)); //escriure els nous arrays
         </script>
     <h3>8 Matrius</h3>
     <h4>8.1 Recórrer un array d'arrays per mostrar-lo com una matriu. Per exemple [[1,1],[2,2]] es mostraria de la manera següent:</h4>
+        <script>
+            array = [[1,2],[2,2]];
+            for (element in array) {
+                for (subelement in element) {
+                    document.write(subelement);
+                }
+            }
+        </script>
+    <h3>9 i 10 Funcions i arrays</h3>
+    <h4>- Crear una funció que rebi un array com a paràmetre i torneu una còpia de l'array.</h4>
+        <script>
+            array = [2,4]
+            array2 = array
+            document.write(array + "," + array2)
+        </script>
+    <h4>- Crear una funció que torni la mitjana d'un array, en cas que l'array estigui buit ha de tornar zero.</h4>
+        <script>
+            function mitjana(num) {
+                array = arguments; 
+                total = 0;
+                for(let i = 0; i < array.length; i++) total += +array[i];
+                document.write(total / array.length);
+            }
+            console.log(mitjana(5, 6, 12, 21))
+        </script>
+    <h4>- Crear una funció que calculi la mitjana dins d'un array però dins d'un rang, aquesta funció rep l'array, un punt de partida i un de terme i torna la mitjana dels valors dins del rang especificat.</h4>
 </body>
 </html>
