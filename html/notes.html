@@ -152,11 +152,6 @@
         </script>
     <h3>Trycatch</h3>
         <script>
-            // onError = maneja_error;
-            // let missatge = "";
-            // function maneja_error(msg, url, l) {
-            //     missatge = "Hi ha un error"
-            // }
             try {
                 function dividir(a,b) {
                     return a/b;
@@ -169,6 +164,93 @@
                 document.write("Descripció del error: <br>" + e.description + "<br>")
                 document.write("Nombre del error: <br>" + e.number + "<br>")
             }
+        </script>
+    <h3>Let / Var</h3>
+        <script>
+            // let variableA = 3;
+            var variableB = 5;
+
+            function suma(a,b) {
+                let variableA = a;
+                return variableA + b;
+            }
+
+            let resultat = suma(3,variableB);
+            document.write("El resultat de la suma és: " + resultat);
+            document.write("<br>El valor de la variableB és: " + variableB);
+            // document.write("<br>El valor de la variableA és: " + variableA);
+        </script>
+    <h2>Expressions regulars</h2>
+    <hr>
+    <h3>Conté la paraula</h3>
+        <script>
+            let cadena1 = "Blau és el cel";
+            let cadena2 = "M'he caigut i m'he fet molts blaus a les cames";
+            let cadena3 = "La casa és de color blau";
+            let cadena4 = "La bicicleta té tons blavosos";
+            let laMevaExpressio = /[Bb]lau/; //conté la paraula
+            document.write(cadena1 + " ---><b> " + laMevaExpressio.test(cadena1) + "</b><br>"); //true
+            document.write(cadena2 + " ---><b> " + laMevaExpressio.test(cadena2) + "</b><br>"); //true
+            document.write(cadena3 + " ---><b> " + laMevaExpressio.test(cadena3) + "</b><br>"); //true
+            document.write(cadena4 + " ---><b> " + laMevaExpressio.test(cadena4) + "</b><br>"); //false
+        </script>
+    <h3>Conté la paraula al inici</h3>
+        <script>
+            laMevaExpressio = /^[Bb]lau/; // ^ conté la paraula a l'inici
+            document.write(cadena1 + " ---><b> " + laMevaExpressio.test(cadena1) + "</b><br>"); //true
+            document.write(cadena2 + " ---><b> " + laMevaExpressio.test(cadena2) + "</b><br>"); //false
+            document.write(cadena3 + " ---><b> " + laMevaExpressio.test(cadena3) + "</b><br>"); //false
+            document.write(cadena4 + " ---><b> " + laMevaExpressio.test(cadena4) + "</b><br>"); //false
+        </script>
+    <h3>Conté la paraula al final</h3>
+        <script>
+            laMevaExpressio = /blau$/; // $ conté la paraula al final
+            document.write(cadena1 + " ---><b> " + laMevaExpressio.test(cadena1) + "</b><br>"); //false
+            document.write(cadena2 + " ---><b> " + laMevaExpressio.test(cadena2) + "</b><br>"); //false
+            document.write(cadena3 + " ---><b> " + laMevaExpressio.test(cadena3) + "</b><br>"); //true
+            document.write(cadena4 + " ---><b> " + laMevaExpressio.test(cadena4) + "</b><br>"); //false
+        </script>
+    <h3>Conté la paraula a l'inici o al final</h3>
+        <script>
+            laMevaExpressio = /\b[Bb]lau\b/; // \b conté la paraula a l'inici i al final
+            document.write(cadena1 + " ---><b> " + laMevaExpressio.test(cadena1) + "</b><br>"); //true
+            document.write(cadena2 + " ---><b> " + laMevaExpressio.test(cadena2) + "</b><br>"); //false
+            document.write(cadena3 + " ---><b> " + laMevaExpressio.test(cadena3) + "</b><br>"); //true
+            document.write(cadena4 + " ---><b> " + laMevaExpressio.test(cadena4) + "</b><br>"); //false
+        </script>
+    <h3>Metacaràcters</h3>
+        <script>
+            laMevaExpressio = /\^/; // \ indica un caràcter en lloc de un simbol
+            let cadena6 = "L'accent circumflex s'escriu amb ^";
+            document.write(cadena6 + " ---><b> " + laMevaExpressio.test(cadena6) + "</b><br>"); //true
+        </script>
+    <h3>Multiples caràcters []</h3>
+        <script>
+            laMevaExpressio = /[BVbv]ar[cçs]elona/;
+            let cadena7 = "Jo vaig néixer a Barcelona";
+            let cadena8 = "Jo vaig néixer a Varselona";
+            let cadena9 = "Jo vaig néixer a Barna";
+            let cadena10 = "Jo vaig néixer a Barçelona";
+            let cadena11 = "Jo vaig néixer a barzelona";
+            document.write(cadena7 + " ---><b> " + laMevaExpressio.test(cadena7) + "</b><br>"); //true
+            document.write(cadena8 + " ---><b> " + laMevaExpressio.test(cadena8) + "</b><br>"); //true
+            document.write(cadena9 + " ---><b> " + laMevaExpressio.test(cadena9) + "</b><br>"); //false
+            document.write(cadena10 + " ---><b> " + laMevaExpressio.test(cadena10) + "</b><br>"); //true
+            document.write(cadena11 + " ---><b> " + laMevaExpressio.test(cadena11) + "</b><br>"); //false
+        </script>
+    <h3>Negació multiples caràcters</h3>
+        <script>
+            laMevaExpressio = /Bar[^cs]elona/;
+            document.write(cadena7 + " ---><b> " + laMevaExpressio.test(cadena7) + "</b><br>"); //false
+            document.write(cadena10 + " ---><b> " + laMevaExpressio.test(cadena10) + "</b><br>"); //true
+        </script>
+    <h3>Coincideix zero o més caràcters</h3>
+        <script>
+            let cadena12 = "Barna";
+            let cadena13 = "Bana";
+            laMevaExpressio = /Bar*na/;
+            document.write(cadena12 + " ---><b> " + laMevaExpressio.test(cadena12) + "</b><br>"); //false
+            document.write(cadena13 + " ---><b> " + laMevaExpressio.test(cadena13) + "</b><br>"); //true
         </script>
 </body>
 </html>
