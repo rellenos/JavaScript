@@ -252,5 +252,10 @@
             document.write(cadena12 + " ---><b> " + laMevaExpressio.test(cadena12) + "</b><br>"); //false
             document.write(cadena13 + " ---><b> " + laMevaExpressio.test(cadena13) + "</b><br>"); //true
         </script>
+        <script>
+            let cadena14 = "t a p";
+            laMevaExpressio = /{?x}t a p{?-x}/;
+            document.write(cadena14 + " ---><b> " + laMevaExpressio.test(cadena14) + "</b><br>"); //true
+        </script>
 </body>
 </html>
