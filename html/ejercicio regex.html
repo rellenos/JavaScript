@@ -9,6 +9,49 @@
 <body>
     <h1>Exercicis de regex</h1>
     <hr>
-    
+    <h3>1. Validació de correus electrònics</h3>
+    <script>
+        document.write("test@example.com és " + esEmailValid("test@example.com") + "<br>"); // true
+        document.write("test.example.com és " + esEmailValid("test.example.com") + "<br>"); //false
+        document.write("@hola.com és " + esEmailValid("@hola.com")) // false
+    </script>
+    <h3>2. Extracció de números de telèfon</h3>
+    <script>
+        document.write(extreureNombresTelefon("Call me at (123) 456-7890, (987) 654-3210 or 609 12 34 56")); // ["(123) 456-7890", "(987) 654-3210"]
+    </script>
+    <h3>3. Validació de codis postals</h3>
+    <script>
+        document.write("12345 és " + esCpValid("12345") + "<br>"); //true
+        document.write("12E4S és " + esCpValid("12E4S") + "<br>"); //false
+        document.write("1234567 és " + esCpValid("1234567") + "<br>"); //false
+    </script>
+    <h3>4. Extracció de dominis de correu electrònic</h3>
+    <script>
+        document.write(extraureDominiEmail("test@example.com")); // "example.com"
+    </script>
+    <h3>5. Validació de números de targeta de crèdit</h3>
+    <script>
+        document.write(esTargetaCreditValida("1234 5678 9012 3456") + "<br>"); // true
+        document.write(esTargetaCreditValida("1234567890123456") + "<br>"); // true
+        document.write(esTargetaCreditValida("1234 5678 9012 3456 7") + "<br>"); // false
+        document.write(esTargetaCreditValida("1234-5678-9012-3456") + "<br>"); // false
+    </script>
+    <h3>6. Extracció de hashtags</h3>
+    <script>
+        document.write(extraureHashtags("Loving the new #JavaScript features in #ECMAScript2021!")); // ["#JavaScript", "#ECMAScript2021"]
+    </script>
+    <h3>7. Validació de contrasenyes</h3>
+    <script>
+        document.write(esPasswordValida("Password1!") + "<br>"); // true
+        document.write(esPasswordValida("password1")); // false
+    </script>
+    <h3>8. Extracció de dates</h3>
+    <script>
+        document.write(extraureDates("My birthday is on 12/05/1992 and my brother's is on 03/10/1995.")); // ["12/05/1992", "03/10/1995"]
+    </script>
+    <h3>9. Eliminació de duplicats en una cadena</h3>
+    <script>
+        document.write(treureParaulesDuplicades("This is is a test test.")); // "This is a test."
+    </script>
 </body>
 </html>
