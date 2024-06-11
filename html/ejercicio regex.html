@@ -53,5 +53,59 @@
     <script>
         document.write(treureParaulesDuplicades("This is is a test test.")); // "This is a test."
     </script>
+    <h3>10. Validació de URL</h3>
+    <script>
+        document.write(esURLValida("https://www.example.com") + "<br>"); // true
+        document.write(esURLValida("ftp://files.example.com") + "<br>"); // true
+        document.write(esURLValida("htp://invalid-url.com")); // false
+    </script>
+    <h3>11. Validació de números de seguretat social</h3>
+    <script>
+        document.write(esSegSocValida("123-45-6789") + "<br>"); // true
+        document.write(esSegSocValida("123-456-789")); // false
+    </script>
+    <h3>12. Extracció de noms d'usuari de Twitter</h3>
+    <script>
+        document.write(extraureUsuarisTwitter("Follow us on Twitter @example and @test_account.")); // ["@example", "@test_account"]
+    </script>
+    <h3>13. Validació de codis de barres EAN-13</h3>
+    <script>
+        document.write(esEAN13Valid("4006381333931") + "<br>"); // true
+        document.write(esEAN13Valid("123456789012")); // false
+    </script>
+    <h3>14. Extracció de URLs</h3>
+    <script>
+        document.write(extractURLs("Visit our site at https://www.example.com or http://www.test.com")); // ["https://www.example.com", "http://www.test.com"]
+    </script>
+    <h3>15. Validació de noms de fitxers</h3>
+    <script>
+        document.write(esFitxerValid("example.txt") + "<br>"); // true
+        document.write(esFitxerValid("example.docx")); // false
+    </script>
+    <h3>16. Extracció de codis HEX de colors</h3>
+    <script>
+        document.write(extraureColorsHex("Colors: #FF5733, #FFF, and #123456.")); // ["#FF5733", "#FFF", "#123456"]
+    </script>
+    <h3>17. Validació de números ISBN-10</h3>
+    <script>
+        document.write(esISBN10Valid("0306406152") + "<br>"); // true
+        document.write(esISBN10Valid("123456789x") + "<br>"); // true
+        document.write(esISBN10Valid("12345678901") + "<br>"); // false
+        document.write(esISBN10Valid("123456789") + "<br>"); // false
+        document.write(esISBN10Valid("1234567890")); // false
+    </script>
+    <h3>18. Extracció de paraules amb lletra majúscula</h3>
+    <script>
+        document.write(extraureParaulesMajuscula("Hello World, this is JavaScript!")); // ["Hello", "World", "JavaScript"]
+    </script>
+    <h3>19. Validació de plaquetes de matrícula</h3>
+    <script>
+        document.write(esMatriculaValida("ABC-123") + "<br>"); // true
+        document.write(esMatriculaValida("AB-1234")); // false
+    </script>
+    <h3>20. Extracció de preus</h3>
+    <script>
+        document.write(extraurePreus("The total cost is $15.99, but with discount it's only $12.00.")); // [
+    </script>
 </body>
 </html>
