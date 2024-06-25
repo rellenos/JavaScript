@@ -151,6 +151,7 @@
             document.write(n3 + "<br>");
         </script>
     <h3>Trycatch</h3>
+
         <script>
             try {
                 function dividir(a,b) {
@@ -165,6 +166,7 @@
                 document.write("Nombre del error: <br>" + e.number + "<br>")
             }
         </script>
+        
     <h3>Let / Var</h3>
         <script>
             // let variableA = 3;
@@ -256,6 +258,21 @@
             let cadena14 = "t a p";
             laMevaExpressio = /{?x}t a p{?-x}/;
             document.write(cadena14 + " ---><b> " + laMevaExpressio.test(cadena14) + "</b><br>"); //true
+        </script>
+    <h2>Funcions fletxa</h2>
+    <hr>
+        <script>
+            function suma(a,b) {
+                return a+b;
+            }
+
+            // a= 5;
+            // b= 8;
+
+            resta = (a,b) => a-b;
+
+            document.write(suma(5,8) + "<br>");
+            document.write(resta(10,8))
         </script>
 </body>
 </html>

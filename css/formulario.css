@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+header, .button {
+    color: #eee;
+    background-color: #4B01D1;
+}
+
+.formulario {
+    border: 1px solid black;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+form, .declaracion {
+    display: flex;
+}
+
+form {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+hr, .button, .width100, fieldset {
+    margin: 10px;
+}
+
+fieldset, textarea, input, legend, p {
+    background-color: #eee;
+}
+
+fieldset {
+    border-radius: 10px 10px 0 0;
+    display: inline-block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+fieldset:hover {
+    border-bottom: 2px solid #4B01D1;
+}
+
+fieldset.error {
+    box-shadow: 0px 0px 5px 0px red;
+    border-bottom: 2px solid red;
+}
+
+legend.error {
+    color: red;
+}
+
+legend, p {
+    font-size: .7em;
+    font-weight: 600;
+}
+
+p {
+    background-color: #fff;
+}
+
+select{
+    border: none;
+}
+
+input {
+    font-size: 1.1em;
+    height: 20px;
+    border: 0;
+}
+
+input:focus fieldset {
+    box-shadow: 0 0 10px blue;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.name, .dni, .tel, .occupation {
+    width: 15%;
+}
+
+.surname1, .surname2, .mail {
+    width: 30%;
+}
+
+:placeholder-shown {
+    font-size: .9em;
+}
+
+.date, .button:hover {
+    cursor: pointer;
+}
+
+.province {
+    width: 17%;
+}
+
+.cp {
+    width: 10%;
+}
+
+.meeted {
+    width: 50%;
+}
+
+.width100, hr, input {
+    width: 100%;
+}
+
+.align-end {
+    text-align: end;
+}
+
+textarea {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.button {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #6f13f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #666;
+}
+
+#radio1, #radio2, #checkbox1, #checkbox2 {
+    width: 40px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
